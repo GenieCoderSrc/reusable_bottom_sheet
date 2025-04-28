@@ -1,6 +1,6 @@
 name: reusable_bottom_sheet
 description: "A reusable Flutter package to easily create customizable bottom sheets with options to display a title, subtitle, child widgets, and a drag handle. It supports features like custom height, background color, border radius, and callback functions, making it ideal for displaying various types of content in a bottom sheet with smooth interactions."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/GenieCoderSrc/reusable_bottom_sheet
 repository: https://github.com/GenieCoderSrc/reusable_bottom_sheet
 issue_tracker: https://github.com/GenieCoderSrc/reusable_bottom_sheet/issues

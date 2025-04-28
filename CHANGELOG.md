@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2
+- Create Example File.
+
 ## 0.0.1
 - Introduced `customBottomSheet` function to easily create customizable bottom sheets.
 - Added `showOptionBottomSheet` for displaying a list of selectable options.
