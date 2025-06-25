@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2+1
+## Fixed
+- Fixed custom bottom-sheet backgroundColor.
+
 ## 0.0.2
+## New
 - Create Example File.
 
 ## 0.0.1
@@ -18,4 +23,3 @@ All notable changes to this project will be documented in this file.
     - Custom height fraction
     - Pill visibility toggle
     - Callback on pop
-

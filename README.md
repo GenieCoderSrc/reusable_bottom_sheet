@@ -21,7 +21,7 @@ A Flutter package to create **highly customizable**, **reusable** bottom sheets 
 Add this to your `pubspec.yaml`:
 
 ```yaml
-reusable_bottom_sheet: ^0.0.2
+reusable_bottom_sheet: <latest_version>
 ```
 
 Import the package:
@@ -108,4 +108,3 @@ Contributions, issues, and feature requests are welcome! Feel free to submit a p
 ## Maintainer
 
 Made with ❤️ by [Shohidul Islam](https://github.com/GenieCoderSrc/reusable_bottom_sheet)
-

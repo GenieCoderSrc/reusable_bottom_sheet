@@ -17,7 +17,7 @@ void customBottomSheet({
   VoidCallback? onWillPop,
 }) {
   showModalBottomSheet(
-    backgroundColor: Colors.transparent,
+
     isScrollControlled: isScrollControlled,
     context: context,
     builder: (_) {
