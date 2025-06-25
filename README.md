@@ -108,4 +108,3 @@ Contributions, issues, and feature requests are welcome! Feel free to submit a p
 ## Maintainer
 
 Made with ❤️ by [Shohidul Islam](https://github.com/GenieCoderSrc/reusable_bottom_sheet)
-

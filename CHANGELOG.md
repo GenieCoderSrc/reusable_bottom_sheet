@@ -18,4 +18,3 @@ All notable changes to this project will be documented in this file.
     - Custom height fraction
     - Pill visibility toggle
     - Callback on pop
-
