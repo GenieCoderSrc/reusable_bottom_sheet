@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Reusable Bottom Sheet Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const BottomSheetExampleScreen(),
     );
   }
@@ -26,9 +24,7 @@ class BottomSheetExampleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Reusable Bottom Sheet Demo'),
-      ),
+      appBar: AppBar(title: const Text('Reusable Bottom Sheet Demo')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
@@ -37,18 +33,9 @@ class BottomSheetExampleScreen extends StatelessWidget {
               title: 'Options',
               supTitle: 'Choose one',
               options: [
-                const OptionEntity(
-                  icon: Icons.camera_alt,
-                  title: 'Camera',
-                ),
-                const OptionEntity(
-                  icon: Icons.photo,
-                  title: 'Gallery',
-                ),
-                const OptionEntity(
-                  icon: Icons.share,
-                  title: 'Share',
-                ),
+                const OptionEntity(icon: Icons.camera_alt, title: 'Camera'),
+                const OptionEntity(icon: Icons.photo, title: 'Gallery'),
+                const OptionEntity(icon: Icons.share, title: 'Share'),
               ],
               onTap: () {
                 Navigator.pop(context);

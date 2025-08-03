@@ -21,8 +21,11 @@ void showOptionBottomSheet({
     supTitle: supTitle,
     child: Expanded(
       child: SingleChildScrollView(
-        child:
-            OptionList(options: options, onTap: onTap, optionItem: optionItem),
+        child: OptionList(
+          options: options,
+          onTap: onTap,
+          optionItem: optionItem,
+        ),
       ),
     ),
   );

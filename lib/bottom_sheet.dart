@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_style/app_style.dart';
 import 'package:reusable_bottom_sheet/pill_gesture.dart';
 
 void customBottomSheet({
@@ -10,21 +9,21 @@ void customBottomSheet({
   String? supTitle,
   double borderRadius = 30,
   double? titleBottomPadding,
-  double? sheetHeightFraction, // Adjust the fraction to control the height
+  double? sheetHeightFraction,
   Color? bgColor,
   bool hasPillGesture = true,
   bool isScrollControlled = true,
   VoidCallback? onWillPop,
 }) {
   showModalBottomSheet(
-
     isScrollControlled: isScrollControlled,
     context: context,
     builder: (_) {
+      final theme = Theme.of(context);
       return PopScope(
         onPopInvokedWithResult: (bool canPop, dynamic data) {
           if (onWillPop != null) {
-            onWillPop(); // Trigger pop event callback if provided
+            onWillPop();
           }
         },
         child: Padding(
@@ -32,11 +31,11 @@ void customBottomSheet({
             bottom: MediaQuery.of(context).viewInsets.bottom,
           ),
           child: FractionallySizedBox(
-            heightFactor: sheetHeightFraction, // Set the height factor here
+            heightFactor: sheetHeightFraction,
             child: Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                color: bgColor ?? Theme.of(context).canvasColor,
+                color: bgColor ?? theme.canvasColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(borderRadius),
                   topRight: Radius.circular(borderRadius),
@@ -47,24 +46,41 @@ void customBottomSheet({
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    if (hasPillGesture) const PillGesture(), // Added here
+                    if (hasPillGesture) const PillGesture(),
                     if (title != null)
                       Padding(
-                        padding:
-                        EdgeInsets.only(bottom: titleBottomPadding ?? 16.0),
+                        padding: EdgeInsets.only(
+                          bottom: titleBottomPadding ?? 16.0,
+                        ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(title ?? '',
-                                style: titleTxtStyle ??
-                                    AppTxtStyles.kMidTitleTextStyle),
+                            Text(
+                              title,
+                              style: titleTxtStyle ??
+                                  theme.textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                  ) ??
+                                  const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                            ),
                             if (supTitle != null)
-                              Text(supTitle ?? '',
-                                  style: AppTxtStyles.kSubTitleLightTextStyle),
+                              Text(
+                                supTitle,
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: Colors.grey[600],
+                                ) ??
+                                    const TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                              ),
                           ],
                         ),
                       ),
-                    Container(child: child),
+                    if (child != null) child,
                   ],
                 ),
               ),
@@ -75,6 +91,7 @@ void customBottomSheet({
     },
   );
 }
+
 
 // void customBottomSheet({
 //   required BuildContext context,

@@ -6,11 +6,7 @@ class OptionEntity extends Equatable {
   final String? title;
   final VoidCallback? onTap;
 
-  const OptionEntity({
-    this.icon,
-    this.title,
-    this.onTap,
-  });
+  const OptionEntity({this.icon, this.title, this.onTap});
 
   @override
   List<Object?> get props => [icon, title, onTap];
