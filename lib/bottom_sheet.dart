@@ -57,7 +57,8 @@ void customBottomSheet({
                           children: [
                             Text(
                               title,
-                              style: titleTxtStyle ??
+                              style:
+                                  titleTxtStyle ??
                                   theme.textTheme.titleMedium?.copyWith(
                                     fontWeight: FontWeight.w600,
                                   ) ??
@@ -69,9 +70,10 @@ void customBottomSheet({
                             if (supTitle != null)
                               Text(
                                 supTitle,
-                                style: theme.textTheme.bodySmall?.copyWith(
-                                  color: Colors.grey[600],
-                                ) ??
+                                style:
+                                    theme.textTheme.bodySmall?.copyWith(
+                                      color: Colors.grey[600],
+                                    ) ??
                                     const TextStyle(
                                       fontSize: 14,
                                       color: Colors.grey,
@@ -91,7 +93,6 @@ void customBottomSheet({
     },
   );
 }
-
 
 // void customBottomSheet({
 //   required BuildContext context,

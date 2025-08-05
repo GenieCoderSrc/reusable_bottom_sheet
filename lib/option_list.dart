@@ -19,14 +19,13 @@ class OptionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return options != null
         ? Column(
-          children:
-              options!
-                  .map(
-                    (option) =>
-                        optionItem ?? OptionItem(option: option, onTap: onTap),
-                  )
-                  .toList(),
-        )
+            children: options!
+                .map(
+                  (option) =>
+                      optionItem ?? OptionItem(option: option, onTap: onTap),
+                )
+                .toList(),
+          )
         : const SizedBox();
   }
 }
