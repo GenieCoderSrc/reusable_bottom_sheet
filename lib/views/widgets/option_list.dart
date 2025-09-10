@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'entity/option_entity.dart';
+import '../../entity/option_entity.dart';
 import 'option_item.dart';
 
 class OptionList extends StatelessWidget {

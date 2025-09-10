@@ -6,13 +6,13 @@ A Flutter package to create **highly customizable**, **reusable** bottom sheets 
 
 ## Features
 
-- Fully customizable modal bottom sheets
-- Optional title and subtitle support
-- Optional pill gesture at the top for user interaction hint
-- Scrollable content support
-- Flexible height control
-- Easily show option lists
-- Reusable components: `OptionEntity`, `OptionItem`, `OptionList`, `PillGesture`
+* Adaptive & customizable bottom sheets
+* Title and subtitle support
+* Optional pill gesture at the top
+* Scrollable content support
+* Flexible height control
+* Built-in option list bottom sheet
+* Reusable components: `OptionEntity`, `OptionItem`, `OptionList`, `PillGesture`
 
 ---
 
@@ -34,28 +34,35 @@ import 'package:reusable_bottom_sheet/reusable_bottom_sheet.dart';
 
 ## Usage
 
-### Simple Custom Bottom Sheet
+### Adaptive Bottom Sheet (Custom Content)
 
 ```dart
-customBottomSheet(
+AdaptiveBottomSheet(
   context: context,
   title: 'Custom Sheet',
   supTitle: 'This is a subtitle',
-  child: Text('Your content here'),
-);
+  child: const Text('Your content here'),
+).show();
 ```
 
-### Showing an Option List Bottom Sheet
+### Option List Bottom Sheet
 
 ```dart
-showOptionBottomSheet(
+final selected = await showOptionBottomSheet<OptionEntity>(
   context: context,
   title: 'Options',
+  supTitle: 'Choose one',
   options: [
-    OptionEntity(title: 'Option 1', icon: Icons.ac_unit, onTap: () {}),
-    OptionEntity(title: 'Option 2', icon: Icons.access_alarm, onTap: () {}),
+    const OptionEntity(title: 'Camera', icon: Icons.camera_alt),
+    const OptionEntity(title: 'Gallery', icon: Icons.photo),
+    const OptionEntity(title: 'Share', icon: Icons.share),
   ],
+  onTap: (option) => Navigator.pop(context, option),
 );
+
+if (selected != null) {
+  print("User picked: ${selected.title}");
+}
 ```
 
 ---
@@ -63,27 +70,31 @@ showOptionBottomSheet(
 ## Components
 
 ### `OptionEntity`
+
 Represents an option with an icon, title, and tap handler.
 
 ### `OptionItem`
+
 Widget for a single option item.
 
 ### `OptionList`
+
 Widget to display a list of `OptionItem`s.
 
 ### `PillGesture`
+
 A draggable indicator usually shown at the top of the sheet.
 
 ---
 
 ## Customization Options
 
-- `title`, `supTitle`, and their text styles
-- Background color (`bgColor`)
-- Border radius (`borderRadius`)
-- Custom child widget
-- Optional pill gesture (`hasPillGesture`)
-- Control the height with `sheetHeightFraction`
+* `title`, `supTitle`, and their text styles
+* Background color (`bgColor`)
+* Border radius (`borderRadius`)
+* Custom child widget
+* Optional pill gesture (`hasPillGesture`)
+* Control the height with `sheetHeightFraction`
 
 ---
 

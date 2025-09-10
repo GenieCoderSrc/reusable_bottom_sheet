@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'entity/option_entity.dart';
+import '../../entity/option_entity.dart';
 
 class OptionItem extends StatelessWidget {
   const OptionItem({super.key, required this.option, this.onTap});
