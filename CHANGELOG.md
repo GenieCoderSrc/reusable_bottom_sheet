@@ -2,15 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.5
+
+### Sep 26 2026
+
+- Updated `equatable ^3.0.0`.
+
 ## 0.0.4
 
 ### Sep 10 2025
 
 ### Added
 
-- Added `AdaptiveBottomSheet` class for mobile and web/desktop with lifecycle hooks (`onOpened`, `onClosed`,
+- Added `AdaptiveBottomSheet` class for mobile and web/desktop with lifecycle hooks (`onOpened`,
+  `onClosed`,
   `onWillPop`).
-- Refactored into modular structure (`bottom_sheet.dart`, `dialog_sheet.dart`, `sheet_content.dart`).
+- Refactored into modular structure (`bottom_sheet.dart`, `dialog_sheet.dart`,
+  `sheet_content.dart`).
 - Keyboard-safe wrapper and support for pill, title, and subtitle preserved.
 - Removed `customBottomSheet`.
 
