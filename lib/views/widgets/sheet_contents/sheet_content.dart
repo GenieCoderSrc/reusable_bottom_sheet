@@ -66,8 +66,7 @@ class SheetContent extends StatelessWidget {
                       children: [
                         Text(
                           title!,
-                          style:
-                              titleTxtStyle ??
+                          style: titleTxtStyle ??
                               theme.textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),

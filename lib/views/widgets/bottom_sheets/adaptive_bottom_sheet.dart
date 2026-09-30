@@ -43,8 +43,7 @@ class AdaptiveBottomSheet<T> {
   });
 
   Future<T?> show() async {
-    final isMobile =
-        !kIsWeb &&
+    final isMobile = !kIsWeb &&
         (defaultTargetPlatform == TargetPlatform.android ||
             defaultTargetPlatform == TargetPlatform.iOS);
 
